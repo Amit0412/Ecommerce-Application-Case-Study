@@ -25,7 +25,7 @@ class OrderProcessorRepositoryImplTest {
 
     @BeforeEach
     void setUp() {
-        // You might initialize a test database or mock the necessary dependencies here
+       
         orderProcessorRepository = new OrderProcessorRepositoryImpl();
     }
 
@@ -69,7 +69,7 @@ class OrderProcessorRepositoryImplTest {
         Customers nonExistingCustomer = new Customers(999, "Nonexistent Customer", "nonexistent@example.com", "password");
         Products product = new Products(1, "Test Product", 19.99, "Sample description", 50);
 
-        // Ensure an exception is thrown when trying to add to the cart for a non-existing customer
+      
         assertThrows(CustomerNotFoundException.class, () -> orderProcessorRepository.addToCart(nonExistingCustomer, product, 1));
     }
 
